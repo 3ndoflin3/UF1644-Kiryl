@@ -1,0 +1,30 @@
+<div class="row">
+    <div class="col">
+        {{formulario |json}}
+        <form action="enviar" [formGroup]="formulario" (ngSubmit)="enviar(formulario.value)">
+            <div class="form-group">
+                <label for="Titulo">Titulo</label>
+                <input type="text" class="form-control" formControlName="titulo" autofocus>
+                <small class="form-text text-muted  mb-3">Mínimo 2 y máximo 50 carácteres</small>
+                
+                <label for="Imagen ">Fecha  </label>
+                <input type="text" class="form-control" formControlName="fecha" autofocus>
+                <small class="form-text text-muted  mb-3">Mínimo 6 y máximo 15 carácteres</small>
+
+                <label for="longTitle ">LongTitle </label>
+                <input type="text" class="form-control" formControlName="longTitle" autofocus>
+                <small class="form-text text-muted  mb-3">Mínimo 2 y máximo 50 carácteres</small>
+
+                <label for="TextoNoticia">Texto Noticia  </label>
+                <input type="text" class="form-control" formControlName="textoNoticia" autofocus>
+                <small class="form-text text-muted  mb-3">Mínimo 2 y máximo 50 carácteres</small>
+
+                <label for="Imagen">Imagen</label>
+                <input type="text" class="form-control" formControlName="imagen" autofocus>
+                <small class="form-text text-muted  mb-3">Mínimo 0 y máximo 200 carácteres</small>
+                
+                <button type="submit" [disabled]="formulario.invalid" class="btn btn-primary btn-block">Crear</button>
+            </div>
+        </form>
+    </div>
+</div>
