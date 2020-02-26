@@ -33,9 +33,10 @@ export class DetalleComponent implements OnInit {
 
   getDetalle(id: number) {
     console.trace('getDetalle()')
-    this.noticiaService.obtenerNoticias().subscribe(
+    this.noticiaService.getDetalle(id).subscribe(
       data => {
         console.debug('Noticias recibidas %o', data);
+        this.noticia = data;
          /*
           this.noticia.id = data.filter(x => x.id === id).map(y => y.id);
           this.noticia.titulo = data.filter(x => x.id === id).map( y => y.title);

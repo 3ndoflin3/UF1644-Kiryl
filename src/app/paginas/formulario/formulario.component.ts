@@ -19,19 +19,19 @@ export class FormularioComponent implements OnInit {
 
         id: new FormControl(0),
         titulo: new FormControl(
-          '', // Valor inicial
+          '', 
           [Validators.required, Validators.minLength(2), Validators.maxLength(50)]
         ),
         fecha: new FormControl(
-          '', // Valor inicial
+          '', 
           [Validators.required, Validators.minLength(6), Validators.maxLength(15)]
         ),
         longTitle: new FormControl(
-          '', // Valor inicial
+          '', 
           [Validators.required, Validators.minLength(2), Validators.maxLength(50)]
         ),
         textoNoticia: new FormControl(
-          '', // Valor inicial
+          '', 
           [Validators.required, Validators.minLength(2), Validators.maxLength(50)]
         ),
         imagen: new FormControl('', [Validators.required, Validators.minLength(0), Validators.maxLength(200)])

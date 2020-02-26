@@ -11,7 +11,7 @@
         <ul class="list-group">
             <!-- {{noticias | json}} -->
             <li *ngFor="let noticia of noticias" class="list-group-item ">
-                <span>{{ noticia.title }}</span> <!-- pilla el .id -->
+                <span>{{ noticia.titulo }}</span> <!-- pilla el .id -->
                 <a [routerLink]="['/noticia/', noticia.id]"> Ver Detalle</a>
             </li>
         </ul>
