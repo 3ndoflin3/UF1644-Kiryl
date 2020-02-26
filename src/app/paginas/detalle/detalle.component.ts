@@ -36,13 +36,14 @@ export class DetalleComponent implements OnInit {
     this.noticiaService.obtenerNoticias().subscribe(
       data => {
         console.debug('Noticias recibidas %o', data);
-         
-          this.noticia.id = data.items.filter(x => x.id === id).map(y => y.id);
-          this.noticia.titulo = data.items.filter(x => x.id === id).map( y => y.title);
-          this.noticia.longTitle = data.items.filter(x => x.id === id).map( y => y.longTitle);
-          this.noticia.fecha = data.items.filter(x => x.id === id).map( y => y.publicationDate);
-          this.noticia.textoNoticia = data.items.filter(x => x.id === id).map( y => y.text);
-          this.noticia.imagen = data.items.filter(x => x.id === id).map( y => y.imageSEO);
+         /*
+          this.noticia.id = data.filter(x => x.id === id).map(y => y.id);
+          this.noticia.titulo = data.filter(x => x.id === id).map( y => y.title);
+          this.noticia.longTitle = data.filter(x => x.id === id).map( y => y.longTitle);
+          this.noticia.fecha = data.filter(x => x.id === id).map( y => y.publicationDate);
+          this.noticia.textoNoticia = data.filter(x => x.id === id).map( y => y.text);
+          this.noticia.imagen = data.filter(x => x.id === id).map( y => y.imageSEO);
+          */
         
         console.debug('Noticia recibida %o', this.noticia);
       });

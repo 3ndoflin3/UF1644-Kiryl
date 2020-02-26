@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { Noticia } from 'src/app/model/noticia';
 import { NoticiaService } from 'src/app/services/noticia.service';
 
-
 @Component({
   selector: 'app-noticia',
   templateUrl: './noticia.component.html',
@@ -23,6 +22,9 @@ export class NoticiaComponent implements OnInit {
   ngOnInit() {
     console.trace('Obtener listado');
     this.obtenerListado();
+
+    /* console.debug('Noticias Recibidas %s', JSON.stringify(NOTICIASMAPEADAS));
+    this.noticias = NOTICIASMAPEADAS; */
   }
 
 
@@ -34,8 +36,8 @@ export class NoticiaComponent implements OnInit {
         /**
          * Mapea todo lo que encuentre dentro de items en el JSON y lo devuelve para pintarlo en el HTML
          */
-        this.noticias = data.items;
-        console.debug('Noticias mapeadas %o', this.noticias);
+        this.noticias = data;
+        console.debug('Noticias Recibidas %o', this.noticias);
 
       },
       error => {

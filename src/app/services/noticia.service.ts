@@ -13,19 +13,19 @@ export class NoticiaService {
   }
 
   crearNoticia(noticia: Noticia): Observable<any> {
-    const url = 'http://localhost:3000/page/';
+    const url = 'http://localhost:3000/noticia/';
     console.debug(url);
     return this.http.post<any>(url, noticia);
   }
 
   obtenerNoticias(): Observable<any[]> {
-    const url = 'http://localhost:3000/page/';
+    const url = 'http://localhost:3000/noticia/';
     console.debug(url);
     return this.http.get<any[]>(url);
   }
 
   getDetalle(id: number): Observable<any> {
-    const url = `http://localhost:3000/page/${id}/`;
+    const url = `http://localhost:3000/noticia/${id}/`;
     console.debug(url);
     return this.http.get<any>(url);
   }
